@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>भाई दूज – Bhai Dooj</title>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Mukta:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fff3d6;--gold:#f6b21a;--pink:#ff7aa8;box-sizing:border-box;
+padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:linear-gradient(180deg,#2c0720 0%,#7a1636 55%,#d8662a 100%);background-attachment:fixed;color:var(--cream);font-family:'Mukta',system-ui,sans-serif;text-align:center;overflow-x:hidden}
+h1{font-family:'Yatra One','Mukta',serif;font-weight:400;font-size:clamp(28px,7vw,46px);margin:18px 12px 0;color:var(--gold);text-shadow:0 3px 0 #5a0f2a;letter-spacing:.5px}
+.sub{margin:4px 12px 0;font-size:17px;opacity:.9}
+.wrap{max-width:460px;margin:6px auto 0;padding:0 8px}
+svg{width:100%;height:auto;display:block;overflow:visible}
+.swing{transform-origin:200px 40px;animation:sw 4s ease-in-out infinite alternate}
+@keyframes sw{from{transform:rotate(-3.6deg)}to{transform:rotate(3.6deg)}}
+.arm{transform-origin:170px 302px;transform:rotate(112deg);animation:arm 7s ease-in-out infinite}
+@keyframes arm{0%,12%{transform:rotate(112deg)}28%,40%{transform:rotate(0deg)}34%{transform:rotate(-4deg)}44%,70%{transform:rotate(0deg)}86%,100%{transform:rotate(112deg)}}
+.tilak{opacity:0;animation:tk 7s infinite}
+@keyframes tk{0%,38%{opacity:0;transform:scale(.2)}44%,92%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.tilak{transform-box:fill-box;transform-origin:center}
+.b1{opacity:0;animation:b1 7s infinite}.b2{opacity:0;animation:b2 7s infinite}
+@keyframes b1{0%,30%{opacity:0}36%,58%{opacity:1}64%,100%{opacity:0}}
+@keyframes b2{0%,52%{opacity:0}58%,84%{opacity:1}90%,100%{opacity:0}}
+.flame{transform-box:fill-box;transform-origin:50% 100%;animation:fl .5s ease-in-out infinite alternate}
+@keyframes fl{from{transform:scale(1,1)}to{transform:scale(.85,1.2)}}
+.heart{opacity:0;animation:hr 7s infinite;font-size:20px}
+@keyframes hr{0%,44%{opacity:0;transform:translateY(0)}52%{opacity:1}100%{opacity:0;transform:translateY(-50px)}}
+.pet{animation:fall linear infinite}
+@keyframes fall{from{transform:translateY(-40px) rotate(0)}to{transform:translateY(620px) rotate(360deg)}}
+.blink{transform-box:fill-box;transform-origin:center;animation:bl 4s infinite}
+@keyframes bl{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+button{font:700 18px 'Mukta',sans-serif;background:var(--gold);color:#4a0d25;border:0;border-radius:30px;padding:12px 26px;margin:14px 0 10px;box-shadow:0 4px 0 #a86f00;cursor:pointer}
+button:active{transform:translateY(3px);box-shadow:0 1px 0 #a86f00}
+button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.note{max-width:380px;margin:0 auto 26px;padding:0 16px;font-size:16px;line-height:1.5;opacity:.92}
+h2{font-family:'Yatra One','Mukta',serif;font-weight:400;font-size:28px;color:var(--gold);margin:10px 12px 8px;text-shadow:0 2px 0 #5a0f2a}
+.garden{border-radius:24px;box-shadow:0 8px 0 #4a0d25;overflow:hidden}
+.garden svg{overflow:hidden}
+.bx{animation:bx 1.7s linear infinite alternate}
+@keyframes bx{from{transform:translateX(104px)}to{transform:translateX(296px)}}
+.by{animation:by 1.7s ease-in-out infinite;transform:translateY(-100px)}
+@keyframes by{0%,100%{transform:translateY(-100px)}50%{transform:translateY(-165px)}}
+.spin{transform-box:fill-box;transform-origin:center;animation:sp .6s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.hop{animation:hop .85s ease-in-out infinite}
+@keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.hop2{animation-delay:.42s}
+.cl{animation:cl 40s linear infinite}
+@keyframes cl{from{transform:translateX(-120px)}to{transform:translateX(480px)}}
+.sun{transform-box:fill-box;transform-origin:center;animation:sp 30s linear infinite}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 2.4s ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-8deg)}to{transform:rotate(8deg)}}
+.bf{animation:bf 9s ease-in-out infinite alternate}
+@keyframes bf{0%{transform:translate(0,0)}33%{transform:translate(60px,-30px)}66%{transform:translate(110px,10px)}100%{transform:translate(170px,-24px)}}
+.wing{transform-box:fill-box;transform-origin:center;animation:wg .22s ease-in-out infinite alternate}
+@keyframes wg{from{transform:scaleX(1)}to{transform:scaleX(.25)}}
+.arms{transform-box:fill-box;transform-origin:50% 100%;animation:sway .6s ease-in-out infinite alternate}
+.rl{animation:rl .36s ease-in-out infinite alternate}
+.rl2{animation-direction:alternate-reverse}
+@keyframes rl{from{transform:rotate(-45deg)}to{transform:rotate(45deg)}}
+.rb{animation:rb .36s ease-in-out infinite}
+@keyframes rb{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.sc{animation:scr 1.8s linear infinite}
+@keyframes scr{to{transform:translateX(-400px)}}
+.kt{transform-origin:222px 150px;animation:kt 2s ease-in-out infinite alternate}
+@keyframes kt{from{transform:rotate(-3deg)}to{transform:rotate(5deg)}}
+@media (prefers-reduced-motion:reduce){.rl,.rb,.sc,.kt{animation:none}}
+@media (prefers-reduced-motion:reduce){.swing,.pet,.bx,.by,.hop,.cl,.bf,.sway,.sun,.spin,.wing,.arms{animation:none}}
+</style>
+</head>
+<body>
+<h1>भाई दूज की शुभकामनाएं</h1>
+<p class="sub">Happy Bhai Dooj</p>
+<div class="wrap">
+<svg id="scene" viewBox="0 0 400 600" role="img" aria-label="Cartoon of a sister applying tilak on her brother's forehead while they sit on a jhula">
+<defs>
+<radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffd36b" stop-opacity=".55"/><stop offset="1" stop-color="#ffd36b" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="200" cy="300" r="210" fill="url(#glow)"/>
+<!-- ground + rangoli -->
+<ellipse cx="200" cy="560" rx="190" ry="26" fill="#4a0d25" opacity=".6"/>
+<ellipse cx="200" cy="560" rx="120" ry="15" fill="none" stroke="#f6b21a" stroke-width="3" stroke-dasharray="3 7" stroke-linecap="round"/>
+<ellipse cx="200" cy="560" rx="70" ry="9" fill="none" stroke="#ff7aa8" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+<!-- diyas -->
+<g id="diyas"></g>
+<!-- frame -->
+<path d="M40 560 L52 40 M360 560 L348 40" stroke="#8a4a1f" stroke-width="12" stroke-linecap="round" fill="none"/>
+<rect x="30" y="30" width="340" height="16" rx="8" fill="#a85a24"/>
+<g id="garland"></g>
+
+<g class="swing">
+<!-- ropes -->
+<path d="M95 44 V384 M305 44 V384" stroke="#c98a3b" stroke-width="5" stroke-dasharray="1 0"/>
+<g id="flowers-r"></g>
+<!-- seat -->
+<rect x="68" y="380" width="264" height="24" rx="12" fill="#e0902e"/>
+<rect x="68" y="380" width="264" height="8" rx="4" fill="#f6b21a"/>
+
+<!-- legs -->
+<g fill="#ff7aa8"><rect x="128" y="402" width="20" height="58" rx="10"/><rect x="156" y="402" width="20" height="58" rx="10"/></g>
+<g fill="#f0b48a"><ellipse cx="138" cy="462" rx="14" ry="8"/><ellipse cx="166" cy="462" rx="14" ry="8"/></g>
+<g fill="#fff3d6"><rect x="228" y="402" width="20" height="62" rx="10"/><rect x="256" y="402" width="20" height="62" rx="10"/></g>
+<g fill="#7a3b1a"><ellipse cx="238" cy="468" rx="15" ry="8"/><ellipse cx="266" cy="468" rx="15" ry="8"/></g>
+
+<!-- BROTHER -->
+<path d="M214 384 L226 296 Q250 284 274 296 L286 384 Z" fill="#1f9d8f"/>
+<path d="M250 288 V384" stroke="#f6b21a" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+<circle cx="250" cy="306" r="4" fill="#f6b21a"/><circle cx="250" cy="330" r="4" fill="#f6b21a"/>
+<path d="M276 304 Q300 340 282 372" stroke="#1f9d8f" stroke-width="15" stroke-linecap="round" fill="none"/>
+<circle cx="282" cy="374" r="9" fill="#f0b48a"/>
+<rect x="241" y="274" width="18" height="18" fill="#f0b48a"/>
+<circle cx="250" cy="248" r="38" fill="#f0b48a"/>
+<path d="M212 246 Q208 206 250 206 Q292 206 288 246 Q282 224 250 222 Q218 224 212 246Z" fill="#2a1620"/>
+<circle cx="212" cy="252" r="7" fill="#f0b48a"/><circle cx="288" cy="252" r="7" fill="#f0b48a"/>
+<g class="blink"><circle cx="236" cy="252" r="4.5" fill="#2a1620"/><circle cx="264" cy="252" r="4.5" fill="#2a1620"/></g>
+<path d="M232 242 Q236 238 241 241 M259 241 Q264 238 268 242" stroke="#2a1620" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M238 268 Q250 280 262 268 Q250 273 238 268Z" fill="#8a1c3a" stroke="#8a1c3a" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="226" cy="266" r="6" fill="#ff7aa8" opacity=".55"/><circle cx="274" cy="266" r="6" fill="#ff7aa8" opacity=".55"/>
+<!-- tilak -->
+<g class="tilak"><circle cx="250" cy="231" r="5.5" fill="#d4202c"/><g fill="#fff"><circle cx="248" cy="229" r="1.1"/><circle cx="252" cy="230" r="1.1"/><circle cx="250" cy="233" r="1.1"/></g></g>
+
+<!-- SISTER -->
+<path d="M126 384 L130 296 Q150 286 170 296 L174 384 Z" fill="#ff7aa8"/>
+<path d="M122 384 Q150 372 178 384" stroke="#f6b21a" stroke-width="4" fill="none"/>
+<path d="M130 300 Q150 322 174 300" stroke="#d63c7a" stroke-width="8" fill="none"/>
+<rect x="141" y="276" width="18" height="18" fill="#f0b48a"/>
+<path d="M112 250 Q100 330 124 350" stroke="#2a1620" stroke-width="12" stroke-linecap="round" fill="none"/>
+<circle cx="124" cy="352" r="7" fill="#d4202c"/>
+<circle cx="150" cy="250" r="38" fill="#f0b48a"/>
+<path d="M112 252 Q104 204 150 204 Q196 204 188 252 Q184 222 150 218 Q116 222 112 252Z" fill="#2a1620"/>
+<path d="M122 222 Q150 238 178 222" stroke="#f6b21a" stroke-width="3" fill="none" stroke-dasharray="1 5" stroke-linecap="round"/>
+<circle cx="112" cy="258" r="4.5" fill="#f6b21a"/><circle cx="188" cy="258" r="4.5" fill="#f6b21a"/>
+<g class="blink"><circle cx="136" cy="254" r="4.5" fill="#2a1620"/><circle cx="164" cy="254" r="4.5" fill="#2a1620"/></g>
+<path d="M130 242 Q136 237 142 241 M158 241 Q164 237 170 242" stroke="#2a1620" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M138 270 Q150 282 162 270 Q150 275 138 270Z" fill="#c4204e" stroke="#c4204e" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="126" cy="268" r="6" fill="#ff5c8a" opacity=".5"/><circle cx="174" cy="268" r="6" fill="#ff5c8a" opacity=".5"/>
+<circle cx="150" cy="232" r="3.2" fill="#d4202c"/>
+
+<!-- thali -->
+<g transform="translate(200 378)">
+<ellipse cx="0" cy="4" rx="32" ry="8" fill="#b9791a"/>
+<ellipse cx="0" cy="0" rx="32" ry="8" fill="#ffd36b" stroke="#f6b21a" stroke-width="2"/>
+<ellipse cx="-14" cy="-2" rx="6" ry="2.5" fill="#d4202c"/>
+<circle cx="4" cy="-4" r="4.5" fill="#f08a1c"/><circle cx="13" cy="-2" r="4.5" fill="#f08a1c"/>
+<ellipse cx="0" cy="-9" rx="6" ry="3" fill="#a8531a"/>
+<path class="flame" d="M0 -11 Q-5 -19 0 -27 Q5 -19 0 -11Z" fill="#ffb11a"/>
+</g>
+
+<!-- sister's arm with sleeve + hand -->
+<g class="arm">
+<line x1="170" y1="302" x2="238" y2="235" stroke="#f0b48a" stroke-width="12" stroke-linecap="round"/>
+<line x1="170" y1="302" x2="200" y2="272" stroke="#d63c7a" stroke-width="15" stroke-linecap="round"/>
+<line x1="206" y1="266" x2="220" y2="252" stroke="#f6b21a" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 4"/>
+<circle cx="239" cy="234" r="9" fill="#f0b48a"/>
+<circle cx="241" cy="231" r="3.5" fill="#d4202c"/>
+</g>
+</g>
+
+<!-- speech bubbles & hearts -->
+<g class="b1"><rect x="6" y="116" width="170" height="40" rx="20" fill="#fff3d6"/><path d="M60 155 l8 16 l10 -16z" fill="#fff3d6"/><text x="91" y="142" text-anchor="middle" font-family="Mukta,sans-serif" font-weight="700" font-size="17" fill="#7a1636">Jeete raho, bhaiya! 💛</text></g>
+<g class="b2"><rect x="198" y="116" width="196" height="40" rx="20" fill="#fff3d6"/><path d="M330 155 l8 16 l10 -16z" fill="#fff3d6"/><text x="296" y="142" text-anchor="middle" font-family="Mukta,sans-serif" font-weight="700" font-size="17" fill="#7a1636">Thank you, behna! 🥰</text></g>
+<text class="heart" x="190" y="200">❤️</text>
+<text class="heart" x="214" y="214" style="animation-delay:.4s">✨</text>
+<g id="petals"></g>
+</svg>
+<button id="again">Dobara tilak lagao</button>
+</div>
+<h2>बगीचे में मस्ती</h2>
+<div class="wrap garden">
+<svg viewBox="0 0 400 320" role="img" aria-label="Cartoon of a brother and sister playing catch with a ball in a garden with flowers and butterflies">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd0ff"/><stop offset="1" stop-color="#ffe9b0"/></linearGradient></defs>
+<rect width="400" height="320" fill="url(#sky)"/>
+<g class="sun"><circle cx="335" cy="52" r="34" fill="none" stroke="#ffc22e" stroke-width="8" stroke-dasharray="4 9" stroke-linecap="round"/></g>
+<circle cx="335" cy="52" r="22" fill="#ffc22e"/>
+<g class="cl" fill="#fff"><ellipse cx="60" cy="60" rx="34" ry="13"/><ellipse cx="82" cy="52" rx="22" ry="14"/><ellipse cx="40" cy="52" rx="18" ry="11"/></g>
+<g class="cl" style="animation-delay:-22s" fill="#fff" opacity=".85"><ellipse cx="60" cy="110" rx="26" ry="10"/><ellipse cx="76" cy="104" rx="16" ry="11"/></g>
+<path d="M0 235 Q100 170 200 215 T400 200 V320 H0Z" fill="#7ac251"/>
+<g><rect x="192" y="170" width="12" height="46" rx="4" fill="#8a4a1f"/><circle cx="198" cy="150" r="34" fill="#3f9a3c"/><circle cx="176" cy="164" r="22" fill="#4cb046"/><circle cx="222" cy="164" r="22" fill="#4cb046"/><circle cx="186" cy="142" r="4" fill="#ff7aa8"/><circle cx="210" cy="156" r="4" fill="#ff7aa8"/></g>
+<rect y="250" width="400" height="70" fill="#5fae3e"/>
+<g id="fl"></g>
+
+<!-- sister -->
+<g transform="translate(80 262)"><g class="hop">
+<rect x="-9" y="-30" width="8" height="30" rx="4" fill="#f0b48a"/><rect x="1" y="-30" width="8" height="30" rx="4" fill="#f0b48a"/>
+<g class="arms"><path d="M-10 -60 L-28 -92 M10 -60 L28 -92" stroke="#f0b48a" stroke-width="7" stroke-linecap="round"/></g>
+<path d="M-20 -26 L-12 -64 Q0 -70 12 -64 L20 -26Z" fill="#ff7aa8"/><path d="M-20 -26 Q0 -18 20 -26" stroke="#f6b21a" stroke-width="3" fill="none"/>
+<path d="M-17 -84 Q-24 -50 -14 -42" stroke="#2a1620" stroke-width="7" stroke-linecap="round" fill="none"/>
+<circle cy="-82" r="18" fill="#f0b48a"/><path d="M-18 -82 Q-20 -102 0 -102 Q20 -102 18 -82 Q14 -94 0 -95 Q-14 -94 -18 -82Z" fill="#2a1620"/>
+<circle cx="-6" cy="-81" r="2.4" fill="#2a1620"/><circle cx="6" cy="-81" r="2.4" fill="#2a1620"/>
+<path d="M-5 -73 Q0 -67 5 -73" stroke="#c4204e" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cy="-90" r="1.8" fill="#d4202c"/>
+</g></g>
+
+<!-- brother -->
+<g transform="translate(320 262) scale(-1 1)"><g class="hop hop2">
+<rect x="-9" y="-30" width="8" height="30" rx="4" fill="#fff3d6"/><rect x="1" y="-30" width="8" height="30" rx="4" fill="#fff3d6"/>
+<g class="arms"><path d="M-10 -60 L-28 -92 M10 -60 L28 -92" stroke="#f0b48a" stroke-width="7" stroke-linecap="round"/></g>
+<path d="M-16 -28 L-12 -64 Q0 -70 12 -64 L16 -28Z" fill="#1f9d8f"/>
+<circle cy="-82" r="18" fill="#f0b48a"/><path d="M-18 -84 Q-18 -102 0 -102 Q18 -102 18 -84 Q10 -94 0 -93 Q-10 -94 -18 -84Z" fill="#2a1620"/>
+<circle cx="-6" cy="-81" r="2.4" fill="#2a1620"/><circle cx="6" cy="-81" r="2.4" fill="#2a1620"/>
+<path d="M-5 -73 Q0 -67 5 -73" stroke="#8a1c3a" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cy="-91" r="2" fill="#d4202c"/>
+</g></g>
+
+<!-- ball -->
+<g transform="translate(0 262)"><g class="bx"><g class="by"><g class="spin"><circle r="10" fill="#ffd36b" stroke="#d4202c" stroke-width="3"/><path d="M-10 0 H10" stroke="#d4202c" stroke-width="3"/></g></g></g></g>
+
+<!-- butterflies -->
+<g class="bf" style="transform-origin:0 0"><g transform="translate(30 190)"><g class="wing"><ellipse cx="-5" rx="6" ry="4" fill="#ff7aa8"/><ellipse cx="5" rx="6" ry="4" fill="#ff7aa8"/></g></g></g>
+<g class="bf" style="animation-delay:-4s;animation-direction:alternate-reverse"><g transform="translate(60 150)"><g class="wing"><ellipse cx="-5" rx="6" ry="4" fill="#b07aff"/><ellipse cx="5" rx="6" ry="4" fill="#b07aff"/></g></g></g>
+</svg>
+</div>
+<p class="note" style="margin-top:12px">Bagiche mein bhaiya aur behna ki catch-catch, hansi aur dher saari masti.</p>
+<script>
+(function(){var g=document.getElementById('fl'),N='http://www.w3.org/2000/svg',c=['#ff7aa8','#f6b21a','#fff','#b07aff','#ff5c5c'];
+for(var i=0;i<16;i++){var x=14+i*24.5,y=282+(i%3)*12,s=document.createElementNS(N,'g');s.setAttribute('class','sway');s.style.animationDelay=(-i*.37)+'s';
+s.innerHTML='<line x1="'+x+'" y1="'+y+'" x2="'+x+'" y2="'+(y-22)+'" stroke="#2f7d2a" stroke-width="3"/><circle cx="'+x+'" cy="'+(y-26)+'" r="7" fill="'+c[i%5]+'"/><circle cx="'+x+'" cy="'+(y-26)+'" r="3" fill="#ffc22e"/>';g.appendChild(s)}})();
+</script>
+<h2>दौड़म-भाग</h2>
+<div class="wrap garden">
+<svg viewBox="0 0 400 260" role="img" aria-label="Cartoon of a brother and sister running through a garden while a kite flies behind them">
+<rect width="400" height="260" fill="url(#sky)"/>
+<g class="cl" fill="#fff"><ellipse cx="60" cy="40" rx="30" ry="11"/><ellipse cx="80" cy="33" rx="18" ry="12"/></g>
+<rect y="205" width="400" height="55" fill="#5fae3e"/>
+<g class="sc" id="scr"></g>
+<g class="kt"><line x1="222" y1="150" x2="110" y2="48" stroke="#fff" stroke-width="1.5"/>
+<g transform="translate(110 48) rotate(-35)"><path d="M0 -26 L16 0 L0 30 L-16 0Z" fill="#ff5c8a"/><path d="M0 -26 V30 M-16 0 H16" stroke="#fff" stroke-width="1.5"/><path d="M0 30 q-8 12 0 22 t0 22" stroke="#f6b21a" stroke-width="3" fill="none"/></g></g>
+<g id="rf"></g>
+</svg>
+</div>
+<p class="note" style="margin-top:12px">Aage behna, peeche bhaiya, patang ke saath dono daud pade.</p>
+<script>
+(function(){
+var N='http://www.w3.org/2000/svg',s=document.getElementById('scr'),h='',i;
+for(i=0;i<9;i++){var x=i*100+30;h+='<ellipse cx="'+x+'" cy="212" rx="22" ry="14" fill="'+(i%2?'#3f9a3c':'#4cb046')+'"/><line x1="'+(x+50)+'" y1="240" x2="'+(x+50)+'" y2="224" stroke="#2f7d2a" stroke-width="3"/><circle cx="'+(x+50)+'" cy="220" r="6" fill="'+['#ff7aa8','#f6b21a','#fff','#b07aff'][i%4]+'"/>'}
+s.innerHTML=h;
+function L(c,k){return '<line class="rl '+k+'" style="transform-origin:0px -34px" x1="0" y1="-34" x2="0" y2="-2" stroke="'+c+'" stroke-width="9" stroke-linecap="round"/>'}
+function A(k){return '<line class="rl '+k+'" style="transform-origin:0px -62px" x1="0" y1="-62" x2="0" y2="-36" stroke="#f0b48a" stroke-width="7" stroke-linecap="round"/>'}
+function F(x,g){var c=g?'#ff7aa8':'#1f9d8f',l=g?'#f0b48a':'#fff3d6';
+return '<g transform="translate('+x+' 210)"><g class="rb">'+L(l,'')+L(l,'rl2')+A('rl2')+
+(g?'<path d="M-8 -86 Q-32 -80 -28 -58" stroke="#2a1620" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M-22 -64 L-12 -30 L12 -30 L18 -64 Q0 -70 -12 -64Z" fill="'+c+'"/>':'<path d="M-14 -34 L-12 -64 Q0 -70 12 -64 L14 -34Z" fill="'+c+'"/>')+
+A('')+'<circle cy="-82" r="18" fill="#f0b48a"/><path d="M-18 -82 Q-20 -102 0 -102 Q20 -102 18 -84 Q10 -94 -2 -94 Q-14 -94 -18 -82Z" fill="#2a1620"/><circle cx="8" cy="-81" r="2.4" fill="#2a1620"/><path d="M4 -73 Q10 -67 15 -74" stroke="#8a1c3a" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="0" cy="-92" r="2" fill="#d4202c"/></g></g>'}
+document.getElementById('rf').innerHTML=F(210,0)+F(310,1);
+})();
+</script>
+<p class="note">Behna ne tilak lagaya, bhai ne vaada kiya: hamesha saath rahenge, jhoole ki tarah, upar-neeche, har mod par.</p>
+<script>
+var NS='http://www.w3.org/2000/svg';
+function mk(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e}
+var g=document.getElementById('garland');
+for(var i=0;i<17;i++){var x=40+i*20.6;mk('circle',{cx:x,cy:56+Math.sin(i*.4)*0+ (i%2?6:0),r:8,fill:i%3==0?'#f08a1c':'#f6b21a'},g)}
+var fr=document.getElementById('flowers-r');
+[95,305].forEach(function(x){for(var y=70;y<380;y+=34){mk('circle',{cx:x,cy:y,r:7,fill:(y/34|0)%2?'#f6b21a':'#f08a1c'},fr)}});
+var d=document.getElementById('diyas');
+[[60,578],[140,588],[260,588],[340,578]].forEach(function(p){
+mk('ellipse',{cx:p[0],cy:p[1],rx:15,ry:6,fill:'#c8651b'},d);
+var f=mk('path',{d:'M'+p[0]+' '+(p[1]-4)+' q-5 -9 0 -18 q5 9 0 18z',fill:'#ffc22e',class:'flame'},d)});
+var pt=document.getElementById('petals'),cols=['#f6b21a','#f08a1c','#ff7aa8'];
+for(var j=0;j<14;j++){var e=mk('ellipse',{cx:(j*29+10)%400,cy:0,rx:5,ry:3,fill:cols[j%3],class:'pet',opacity:.85},pt);
+e.style.animationDuration=(7+j%5*1.6)+'s';e.style.animationDelay=(-j*1.1)+'s'}
+document.getElementById('again').onclick=function(){
+var els=document.querySelectorAll('.arm,.tilak,.b1,.b2,.heart');
+els.forEach(function(e){e.style.animation='none'});void document.body.offsetWidth;
+els.forEach(function(e){e.style.animation=''})};
+</script>
+</body>
+</html>
